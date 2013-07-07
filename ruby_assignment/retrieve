@@ -1,0 +1,7 @@
+
+require 'csv'
+CSV.foreach("contacts.csv",headers:true) do |data|
+name="#{data["First Name"]} #{data["Middle Name"]} #{data["Last Name"]}"
+email="#{data["E-mail Address"]}"
+puts "#{name}"	"\t"	"#{email}"
+end
